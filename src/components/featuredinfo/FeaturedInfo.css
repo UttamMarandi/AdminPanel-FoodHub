@@ -1,0 +1,44 @@
+.featured_info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+
+.featured_item {
+  flex: 1;
+  margin: 0px 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 30px;
+  -webkit-box-shadow: 0 6px 38px -4px rgb(24 27 30 / 14%);
+  -moz-box-shadow: 0 6px 38px -4px rgb(24 27 30 / 14%);
+  box-shadow: 0 6px 38px -4px rgb(24 27 30 / 14%);
+}
+.featured_title {
+  font-size: 20px;
+}
+.featured_money_container {
+  margin: 10px 0px;
+  display: flex;
+  align-items: center;
+}
+.featured_money {
+  font-size: 30px;
+  font-weight: 600;
+}
+.featured_money_rate {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.featured_icon {
+  font-size: 14px;
+  margin-left: 5px;
+  color: green;
+}
+
+.featured_icon.negative {
+  color: red;
+}

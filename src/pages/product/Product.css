@@ -1,0 +1,127 @@
+.product_page {
+  flex: 4;
+  padding: 20px;
+  margin: 30px;
+}
+.product_title_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product_add_button {
+  width: 120px;
+  border: none;
+  padding: 8px 10px;
+  background-color: teal;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+}
+
+.produt_top {
+  display: flex;
+}
+.recharts-responsive-container {
+  width: 100% !important;
+}
+.product_top_left {
+  flex: 1;
+}
+.product_top_right {
+  flex: 1;
+}
+
+.product_top_right {
+  padding: 20px;
+  margin: 20px;
+  -webkit-box-shadow: 0 6px 38px -4px rgb(24 27 30 / 14%);
+  -moz-box-shadow: 0 6px 38px -4px rgb(24 27 30 / 14%);
+  box-shadow: 0 6px 38px -4px rgb(24 27 30 / 14%);
+}
+.product_info_img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.product_info_top {
+  display: flex;
+  align-items: center;
+}
+
+.product_name {
+  font-weight: 600;
+}
+.product_info_bottom {
+  margin-top: 20px;
+}
+.product_info_item {
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+.product_bottom {
+  -webkit-box-shadow: 0 6px 38px -4px rgb(24 27 30 / 14%);
+  -moz-box-shadow: 0 6px 38px -4px rgb(24 27 30 / 14%);
+  box-shadow: 0 6px 38px -4px rgb(24 27 30 / 14%);
+  margin: 20px;
+}
+.product_form {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.product_form_left {
+  display: flex;
+  flex-direction: column;
+}
+
+.product_form_left > label {
+  margin-bottom: 10px;
+  color: gray;
+}
+
+.product_form_left > input {
+  margin-bottom: 10px;
+  border: none;
+  padding: 5px;
+  border-bottom: 1px solid gray;
+}
+.product_form_left > input:focus-visible {
+  border: none;
+  border-bottom: 1px solid gray;
+  outline: none;
+}
+.product_form_left > select {
+  margin-bottom: 10px;
+}
+.product_upload_img {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.product_form_right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.product_upload {
+  display: flex;
+  align-items: center;
+}
+.product_button {
+  border: none;
+  background-color: darkblue;
+  color: white;
+  padding: 7px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 40px;
+}

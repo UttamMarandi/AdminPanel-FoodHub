@@ -1,0 +1,143 @@
+.user_page {
+  flex: 4;
+  margin: 30px;
+}
+.user_title_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.user_add_button {
+  width: 120px;
+  border: none;
+  padding: 5px;
+  background-color: teal;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+}
+.user_container {
+  display: flex;
+  margin-top: 20px;
+}
+.user_show {
+  flex: 1;
+  padding: 20px;
+  -webkit-box-shadow: 0 6px 38px -4px rgb(24 27 30 / 14%);
+  -moz-box-shadow: 0 6px 38px -4px rgb(24 27 30 / 14%);
+  box-shadow: 0 6px 38px -4px rgb(24 27 30 / 14%);
+  padding: 20px;
+}
+.user_update {
+  flex: 2;
+  padding: 20px;
+  -webkit-box-shadow: 0 6px 38px -4px rgb(24 27 30 / 14%);
+  -moz-box-shadow: 0 6px 38px -4px rgb(24 27 30 / 14%);
+  box-shadow: 0 6px 38px -4px rgb(24 27 30 / 14%);
+}
+.user_show_top {
+  display: flex;
+  align-items: center;
+}
+.user_show_img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.user_show_top_title {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+.user_show_user_name {
+  font-weight: 600;
+}
+.user_show_user_title {
+  font-weight: 300;
+}
+.user_show_bottom {
+  margin-top: 20px;
+}
+
+.user_show_title {
+  font-size: 14px;
+  font-weight: 600;
+  color: gray;
+}
+
+.user_show_info {
+  display: flex;
+  align-items: center;
+  margin: 20px 0px;
+  color: #444;
+}
+
+.user_show_icon {
+  font-size: 16px !important;
+  margin-right: 8px;
+}
+.user_show_info_title {
+}
+
+/* Right */
+.user_update {
+  margin-left: 20px;
+  padding: 30px;
+}
+
+.user_update_img {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+.user_update_form {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.user_update_title {
+  font-size: 24px;
+  font-weight: 600;
+}
+.user_update_item {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.user_update_item > label {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+.user_update_input {
+  border: none;
+  outline: none;
+  width: 250px;
+  border-bottom: 1px solid gray;
+  margin-top: 20px;
+}
+.user_update_right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.user_update_upload {
+  display: flex;
+  align-items: center;
+}
+.user_update_icon {
+  cursor: pointer;
+}
+.user_update_button {
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  background-color: darkblue;
+  color: white;
+  font-weight: 600;
+}
