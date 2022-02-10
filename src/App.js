@@ -10,38 +10,48 @@ import NewUser from "./pages/newUser.js/NewUser";
 import ProductList from "./pages/productList/ProductList";
 import Product from "./pages/product/Product";
 import NewProduct from "./pages/newProduct/NewProduct";
+import Login from "./pages/login/Login";
+import { useState } from "react";
 
 function App() {
+  const [admin, setAdmin] = useState(true);
   return (
     <Router>
-      <Topbar />
-      <div className="container">
-        <Sidebar />
+      <Switch>
+        <Route path="/login">
+          <Login />
+        </Route>
+        {admin && (
+          <>
+            <Topbar />
+            <div className="container">
+              <Sidebar />
+              <Route exact path="/">
+                <Home />
+              </Route>
 
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/users">
-            <UserList />
-          </Route>
-          <Route path="/user/:userId">
-            <User />
-          </Route>
-          <Route path="/newUser">
-            <NewUser />
-          </Route>
-          <Route path="/products">
-            <ProductList />
-          </Route>
-          <Route path="/product/:productsId">
-            <Product />
-          </Route>
-          <Route path="/newProduct">
-            <NewProduct />
-          </Route>
-        </Switch>
-      </div>
+              <Route path="/users">
+                <UserList />
+              </Route>
+              <Route path="/user/:userId">
+                <User />
+              </Route>
+              <Route path="/newUser">
+                <NewUser />
+              </Route>
+              <Route path="/products">
+                <ProductList />
+              </Route>
+              <Route path="/product/:productsId">
+                <Product />
+              </Route>
+              <Route path="/newProduct">
+                <NewProduct />
+              </Route>
+            </div>
+          </>
+        )}
+      </Switch>
     </Router>
   );
 }
