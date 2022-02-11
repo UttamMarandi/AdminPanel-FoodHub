@@ -12,6 +12,7 @@ const userSlice = createSlice({
       state.isFetching = true;
     },
     loginSuccess: (state, action) => {
+      console.log("action", action.payload);
       state.isFetching = false;
       state.currentUser = action.payload;
     },

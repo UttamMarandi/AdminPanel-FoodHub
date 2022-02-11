@@ -11,25 +11,34 @@ import ProductList from "./pages/productList/ProductList";
 import Product from "./pages/product/Product";
 import NewProduct from "./pages/newProduct/NewProduct";
 import Login from "./pages/login/Login";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
-  const [admin, setAdmin] = useState(true);
+  const [admin, setAdmin] = useState(false);
+
+  const resUser = JSON.parse(
+    JSON.parse(localStorage.getItem("persist:root")).user
+  );
+  const {
+    currentUser: { isAdmin },
+  } = resUser;
+  console.log("isAdmin", isAdmin);
+
+  useEffect(() => {
+    setAdmin(isAdmin);
+  }, [isAdmin]);
+
   return (
     <Router>
-      <Switch>
-        <Route path="/login">
-          <Login />
-        </Route>
-        {admin && (
-          <>
-            <Topbar />
-            <div className="container">
-              <Sidebar />
-              <Route exact path="/">
-                <Home />
-              </Route>
-
+      <Route path="/login">
+        <Login />
+      </Route>
+      {admin && (
+        <>
+          <Topbar />
+          <div className="container">
+            <Sidebar />
+            <Switch>
               <Route path="/users">
                 <UserList />
               </Route>
@@ -48,12 +57,17 @@ function App() {
               <Route path="/newProduct">
                 <NewProduct />
               </Route>
-            </div>
-          </>
-        )}
-      </Switch>
+              <Route exact path="/">
+                <Home />
+              </Route>
+            </Switch>
+          </div>
+        </>
+      )}
     </Router>
   );
 }
 
 export default App;
+
+// bug fix :

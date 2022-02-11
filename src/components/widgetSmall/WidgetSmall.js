@@ -1,8 +1,18 @@
 import { Visibility } from "@material-ui/icons";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./WidgetSmall.css";
+import { getUsers } from "../../utils/apiCalls";
 
 const WidgetSmall = () => {
+  const [users, setUsers] = useState([]);
+  const getUserFn = async () => {
+    const res = await getUsers();
+    setUsers(res);
+  };
+  console.log("widgetsm", users);
+  useEffect(() => {
+    getUserFn();
+  });
   return (
     <div className="widget_small">
       <span className="widgetSm_title">New Join Members</span>
