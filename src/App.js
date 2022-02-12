@@ -11,21 +11,27 @@ import ProductList from "./pages/productList/ProductList";
 import Product from "./pages/product/Product";
 import NewProduct from "./pages/newProduct/NewProduct";
 import Login from "./pages/login/Login";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
   const [admin, setAdmin] = useState(false);
 
-  if (localStorage.getItem("persist:root") !== null) {
-    const resUser = JSON.parse(
-      JSON.parse(localStorage.getItem("persist:root")).user
-    );
-    const {
-      currentUser: { isAdmin },
-    } = resUser;
-    console.log("isAdmin", isAdmin);
-    setAdmin(isAdmin);
-  }
+  const isAdminFunc = () => {
+    if (localStorage.getItem("persist:root") !== null) {
+      const resUser = JSON.parse(
+        JSON.parse(localStorage.getItem("persist:root")).user
+      );
+      let {
+        currentUser: { isAdmin },
+      } = resUser;
+      return isAdmin;
+    }
+  };
+
+  useEffect(() => {
+    const admindata = isAdminFunc();
+    setAdmin(admindata);
+  }, []);
 
   return (
     <Router>

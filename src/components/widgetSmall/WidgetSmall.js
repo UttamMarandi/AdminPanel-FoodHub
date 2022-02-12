@@ -12,7 +12,7 @@ const WidgetSmall = () => {
   console.log("widgetsm", users);
   useEffect(() => {
     getUserFn();
-  });
+  }, []);
   return (
     <div className="widget_small">
       <span className="widgetSm_title">New Join Members</span>

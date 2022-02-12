@@ -1,5 +1,6 @@
 import { loginFailure, loginStart, loginSuccess } from "../redux/userSlice";
 import { request } from "./requestMethods";
+import { getUserFromLocalStorage } from "./getFromLocalstorage";
 
 const login = async (dispatch, user) => {
   dispatch(loginStart());
@@ -14,8 +15,12 @@ const login = async (dispatch, user) => {
 };
 
 const getUsers = async () => {
+  const userData = getUserFromLocalStorage();
+  console.log("userData", userData);
   try {
-    const res = await request.get("/auth/allusers");
+    const res = await request.get("/auth/allusers", {
+      withCredentials: true,
+    });
     console.log("res in getUsers", res);
     if (res) {
       return res;
