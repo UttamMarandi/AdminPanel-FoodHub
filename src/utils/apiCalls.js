@@ -2,17 +2,19 @@ import { loginFailure, loginStart, loginSuccess } from "../redux/userSlice";
 import { request } from "./requestMethods";
 import { getUserFromLocalStorage } from "./getFromLocalstorage";
 
-const login = async (dispatch, user) => {
-  dispatch(loginStart());
-  try {
-    const res = await request.post("/auth/login", user);
-    if (res) {
-      dispatch(loginSuccess(res.data.user));
-    }
-  } catch (error) {
-    dispatch(loginFailure());
-  }
-};
+// const login = async (dispatch, user) => {
+//   dispatch(loginStart());
+//   try {
+//     const res = await request.post("/auth/login", user, {
+//       withCredentials: true,
+//     });
+//     if (res) {
+//       dispatch(loginSuccess(res.data.user));
+//     }
+//   } catch (error) {
+//     dispatch(loginFailure());
+//   }
+// };
 
 const getUsers = async () => {
   const userData = getUserFromLocalStorage();
@@ -30,4 +32,4 @@ const getUsers = async () => {
   }
 };
 
-export { login, getUsers };
+export { getUsers };
